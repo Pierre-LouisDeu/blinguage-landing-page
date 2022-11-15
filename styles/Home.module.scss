@@ -31,6 +31,7 @@
     background-size: 60%;
     background-position: left;
     background-repeat: no-repeat;
+    cursor: pointer;
   }
 
   .buttonPrimary {
@@ -78,11 +79,22 @@
 
 // Hero section
 
+@keyframes scaleUp {
+  0% {
+    transform: scale(10%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
 .hero {
   @include container;
   width: 450px;
 
   .heroText {
+    animation: 1s cubic-bezier(0, 0, 0.2, 1) 0s 1 scaleUp;
+
     h1 {
       font-size: 80px;
       font-weight: bold;
@@ -113,9 +125,19 @@
 
 // Courses Section
 
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .coursesContainer {
   @include container;
   align-items: center;
+  animation: 1s cubic-bezier(0, 0, 0.2, 1) 0s 1 slideInBottom;
 
   .course {
     display: flex;
@@ -129,11 +151,11 @@
     top: 0;
     right: 0;
     border-radius: 20px;
-    
+
     .courseImage {
       scale: 0.6;
     }
-    
+
     p {
       padding: 30px;
       font-weight: 100;

@@ -61,8 +61,8 @@ export default function Home() {
               height={97}
             />
             <p>
-              <span>Detailed lessons</span> packed with vocabulary grammar
-              culture...
+              <span>Detailed lessons</span> lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quisquam, quod.
             </p>
           </div>
           <div className={styles.course}>
@@ -74,8 +74,8 @@ export default function Home() {
               height={97}
             />
             <p>
-              <span>Engaging audio</span> featuring native speackers to perfect
-              your japanese.
+              <span>Engaging audio</span> lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quisquam, quod.
             </p>
           </div>
           <div className={styles.course}>
@@ -87,7 +87,8 @@ export default function Home() {
               height={97}
             />
             <p>
-              <span>Flexible subscription option</span> depending on...
+              <span>Flexible subscription</span> lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quisquam, quod.
             </p>
           </div>
         </section>
