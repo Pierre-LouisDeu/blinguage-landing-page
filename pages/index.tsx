@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.container}>
+        <div className={styles.navContainer}>
           <a className={styles.logo}></a>
           <nav className={styles.nav}>
             <ul>
@@ -31,8 +31,10 @@ export default function Home() {
                   Support
                 </a>
               </li>
+              <li>
+                <button className={styles.buttonPrimary}>Get Started</button>
+              </li>
             </ul>
-            <button className={styles.buttonPrimary}>Get Started</button>
           </nav>
         </div>
 
@@ -49,8 +51,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.courses}>
-          <div className={styles.courseSection}>
+        <section className={styles.coursesContainer}>
+          <div className={styles.course}>
             <Image
               src="/assets/book.png"
               className={styles.courseImage}
@@ -63,7 +65,7 @@ export default function Home() {
               culture...
             </p>
           </div>
-          <div className={styles.courseSection}>
+          <div className={styles.course}>
             <Image
               src="/assets/headset.png"
               className={styles.courseImage}
@@ -76,7 +78,7 @@ export default function Home() {
               your japanese.
             </p>
           </div>
-          <div className={styles.courseSection}>
+          <div className={styles.course}>
             <Image
               src="/assets/book.png"
               className={styles.courseImage}

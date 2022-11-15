@@ -1,25 +1,15 @@
 .main {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 @mixin container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 30px 20vh;
-}
-
-.container {
-  @include container;
-}
-
-.logo {
-  background-image: url(/assets/logo.jpg);
-  width: 300px;
-  background-size: 60%;
-  background-position: left;
-  background-repeat: no-repeat;
+  margin: 4vh 20vh;
 }
 
 @mixin button {
@@ -30,52 +20,43 @@
   transition: all 0.2s ease-in-out;
 }
 
-.buttonPrimary {
-  @include button;
-  background-color: rgba(255, 255, 255, 0);
-  &:hover {
-    background-color: #ffccc4;
-    cursor: pointer;
-  }
-}
+// Navbar section
 
-.buttonSecondary {
-  @include button;
-  border: none;
-  background-color: #372f7f;
-  color: #fcf2d9;
-  width: 30%;
-  height: 10%;
-  &:hover {
-    background-color: #ffccc4;
-    color: #000000;
-    cursor: pointer;
-  }
-}
+.navContainer {
+  @include container;
 
-.nav {
-  display: flex;
-  align-items: center;
-
-  button {
-    margin-left: 3rem;
+  .logo {
+    background-image: url(/assets/logo.jpg);
+    width: 300px;
+    background-size: 60%;
+    background-position: left;
+    background-repeat: no-repeat;
   }
 
+  .buttonPrimary {
+    @include button;
+    background-color: rgba(255, 255, 255, 0);
+    &:hover {
+      background-color: #ffccc4;
+      cursor: pointer;
+    }
+  }
   ul {
     display: flex;
+    align-items: center;
 
     li {
       font-weight: bold;
       margin: 0 3rem;
     }
 
-    .hoverUnderlineAnimation {
+    a {
       display: inline-block;
       position: relative;
       color: #000000;
     }
 
-    .hoverUnderlineAnimation::after {
+    a::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -88,57 +69,87 @@
       transition: transform 0.25s ease-out;
     }
 
-    .hoverUnderlineAnimation:hover::after {
+    a:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
   }
 }
 
+// Hero section
+
 .hero {
   @include container;
-  margin: 3vh 20vh;
   width: 450px;
-}
 
-.heroText {
-  h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: vh;
+  .heroText {
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 100;
+      padding: 20px 0 40px 0;
+    }
   }
 
-  p {
-    font-size: 1.5rem;
-    font-weight: 100;
-    margin-bottom: 6vh;
+  .buttonSecondary {
+    @include button;
+    border: none;
+    background-color: #372f7f;
+    color: #fcf2d9;
+    width: 150px;
+    height: 55px;
+    &:hover {
+      background-color: #ffccc4;
+      color: #000000;
+      cursor: pointer;
+    }
   }
 }
 
-.courses {
+// Courses Section
+
+.coursesContainer {
   @include container;
-  margin: 20vh 12vh;
-  padding-right: 20rem;
-}
+  align-items: center;
 
-.courseSection {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 5vw;
-  width: 220px;
+  .course {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 243px;
+    transition: all 0.35s ease-in-out;
+    position: relative;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    
+    .courseImage {
+      scale: 0.6;
+    }
+    
+    p {
+      padding: 30px;
+      font-weight: 100;
+      // text-align: justify;
 
-  p {
-    padding-top: 20px;
-    font-weight: 100;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      top: -10px;
+      right: -10px;
+      // box-shadow: -7px 7px 20px 2px rgb(55 47 127 / 25%);
+      box-shadow: -7px 7px 20px 2px rgba(0, 0, 0, 0.25);
+    }
   }
-
-  span {
-    font-weight: bold;
-  }
-}
-
-.courseImage {
-  margin: 0 -20px;
-  scale: 0.6;
 }
