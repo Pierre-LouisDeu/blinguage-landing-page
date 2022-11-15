@@ -1,3 +1,8 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
@@ -8,23 +13,40 @@
 .logo {
   background-image: url(/assets/logo.jpg);
   width: 300px;
-  background-size: 50%;
+  background-size: 60%;
   background-position: left;
   background-repeat: no-repeat;
 }
 
-.button {
+@mixin button {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0);
   font-weight: bold;
   padding: 15px 20px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.button:hover {
-  background-color: #ffccc4;
-  cursor: pointer;
+.buttonPrimary {
+  @include button;
+  background-color: rgba(255, 255, 255, 0);
+  &:hover {
+    background-color: #ffccc4;
+    cursor: pointer;
+  }
+}
+
+.buttonSecondary {
+  @include button;
+  border: none;
+  background-color: #372f7f;
+  color: #fcf2d9;
+  width: 30%;
+  height: 10%;
+  &:hover {
+    background-color: #ffccc4;
+    color: #000000;
+    cursor: pointer;
+  }
 }
 
 .nav {
@@ -69,3 +91,24 @@
   }
 }
 
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10vh 30vh;
+  justify-content: space-around;
+  width: 23%;
+}
+
+.heroText {
+  h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
+  }
+}

@@ -11,50 +11,44 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
-        {/* <Image
-            src="/assets/logo.jpg"
-            className={styles.logo}
-            alt="Blinguage"
-            width={232}
-            height={60}
-          /> */}
-        <a className={styles.logo}></a>
-        <nav className={styles.nav}>
-          <ul>
-            <li>
-              <a href="#" className={styles.hoverUnderlineAnimation}>
-                Courses
-              </a>
-            </li>
-            <li>
-              <a href="#" className={styles.hoverUnderlineAnimation}>
-                Why Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className={styles.hoverUnderlineAnimation}>
-                Support
-              </a>
-            </li>
-          </ul>
-          <button className={styles.button}>Get Started</button>
-        </nav>
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <a className={styles.logo}></a>
+          <nav className={styles.nav}>
+            <ul>
+              <li>
+                <a href="#" className={styles.hoverUnderlineAnimation}>
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.hoverUnderlineAnimation}>
+                  Why Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.hoverUnderlineAnimation}>
+                  Support
+                </a>
+              </li>
+            </ul>
+            <button className={styles.buttonPrimary}>Get Started</button>
+          </nav>
+        </div>
 
-        {/* create a hero section */}
-        {/* <section className={styles.hero}>
+        <section className={styles.hero}>
           <div className={styles.heroText}>
-            <h1 className={styles.heroTitle}>
-              Learn Japanese
-            </h1>
-            <p className={styles.heroDescription}>
-              Blinguage is a language learning platform that helps you learn a
-              new language in 3 months.
+            <h1>Learn Japanese</h1>
+            <p>
+              Visiting the temples in Kyoto, getting a new job, or making a
+              personal connection <br/>
+              -no mattter why you want to learn, we have the
+              right course for you.
             </p>
-            <button className={styles.button}>Get Started</button>
+            <button className={styles.buttonSecondary}>Get Started</button>
           </div>
-        </section> */}
-      </div>
+        </section>
+      </main>
     </>
   );
 }
