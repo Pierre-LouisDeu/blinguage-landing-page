@@ -116,9 +116,9 @@
 }
 
 .courses {
-  display: flex;
-  margin: 20vh 0;
-  padding: 0 10vh;
+  @include container;
+  margin: 20vh 12vh;
+  padding-right: 20rem;
 }
 
 .courseSection {
