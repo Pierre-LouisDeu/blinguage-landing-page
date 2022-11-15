@@ -3,11 +3,15 @@
   flex-direction: column;
 }
 
-.container {
+@mixin container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 30px 0;
+  margin: 30px 20vh;
+}
+
+.container {
+  @include container;
 }
 
 .logo {
@@ -92,23 +96,49 @@
 }
 
 .hero {
-  display: flex;
-  justify-content: flex-start;
-  margin: 10vh 30vh;
-  justify-content: space-around;
-  width: 23%;
+  @include container;
+  margin: 3vh 20vh;
+  width: 450px;
 }
 
 .heroText {
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 4rem;
+    margin-bottom: vh;
   }
 
   p {
     font-size: 1.5rem;
     font-weight: 100;
-    margin-bottom: 4rem;
+    margin-bottom: 6vh;
   }
+}
+
+.courses {
+  display: flex;
+  margin: 10vh 0;
+  padding: 0 10vh;
+}
+
+.courseSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 5vw;
+  width: 220px;
+
+  p {
+    padding-top: 20px;
+    font-weight: 100;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.courseImage {
+  margin: 0 -20px;
+  scale: 0.6;
 }

@@ -41,11 +41,52 @@ export default function Home() {
             <h1>Learn Japanese</h1>
             <p>
               Visiting the temples in Kyoto, getting a new job, or making a
-              personal connection <br/>
-              -no mattter why you want to learn, we have the
-              right course for you.
+              personal connection <br />
+              -no mattter why you want to learn, we have the right course for
+              you.
             </p>
             <button className={styles.buttonSecondary}>Get Started</button>
+          </div>
+        </section>
+
+        <section className={styles.courses}>
+          <div className={styles.courseSection}>
+            <Image
+              src="/assets/book.png"
+              className={styles.courseImage}
+              alt="headphones"
+              width={103}
+              height={97}
+            />
+            <p>
+              <span>Detailed lessons</span> packed with vocabulary grammar
+              culture...
+            </p>
+          </div>
+          <div className={styles.courseSection}>
+            <Image
+              src="/assets/headset.png"
+              className={styles.courseImage}
+              alt="hero"
+              width={103}
+              height={97}
+            />
+            <p>
+              <span>Engaging audio</span> featuring native speackers to perfect
+              your japanese.
+            </p>
+          </div>
+          <div className={styles.courseSection}>
+            <Image
+              src="/assets/book.png"
+              className={styles.courseImage}
+              alt="hero"
+              width={103}
+              height={97}
+            />
+            <p>
+              <span>Flexible subscription option</span> depending on...
+            </p>
           </div>
         </section>
       </main>
