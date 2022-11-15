@@ -93,7 +93,8 @@
   width: 450px;
 
   .heroText {
-    animation: 1s cubic-bezier(0, 0, 0.2, 1) 0s 1 scaleUp;
+    // animation: translateOnX 1s ease-in-out;
+    animation: 1.5s cubic-bezier(.47,1.64,.41,.8) 0s 1 scaleUp;
 
     h1 {
       font-size: 80px;
@@ -127,7 +128,10 @@
 
 @keyframes slideInBottom {
   0% {
-    transform: translateY(100%);
+    transform: translateY(120%);
+  }
+  50% {
+    transform: translateY(120%);
   }
   100% {
     transform: translateY(0%);
@@ -137,7 +141,7 @@
 .coursesContainer {
   @include container;
   align-items: center;
-  animation: 1s cubic-bezier(0, 0, 0.2, 1) 0s 1 slideInBottom;
+  animation: 1.5s cubic-bezier(.47,1.64,.41,.8) 0s 1 slideInBottom;
 
   .course {
     display: flex;
@@ -175,3 +179,4 @@
     }
   }
 }
+
