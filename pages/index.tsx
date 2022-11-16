@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+// import BurgerMenu from "../components/burgerMenu";
 
 export default function Home() {
   return (
@@ -12,31 +13,29 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.navContainer}>
+        <nav className={styles.navContainer}>
           <a className={styles.logo}></a>
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <a href="#" className={styles.hoverUnderlineAnimation}>
-                  Courses
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.hoverUnderlineAnimation}>
-                  Why Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.hoverUnderlineAnimation}>
-                  Support
-                </a>
-              </li>
-              <li>
-                <button className={styles.buttonPrimary}>Get Started</button>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <ul>
+            <li>
+              <a href="#" className={styles.hoverUnderlineAnimation}>
+                Courses
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.hoverUnderlineAnimation}>
+                Why Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.hoverUnderlineAnimation}>
+                Support
+              </a>
+            </li>
+            <li>
+              <button className={styles.buttonPrimary}>Get Started</button>
+            </li>
+          </ul>
+        </nav>
 
         <section className={styles.hero}>
           <div className={styles.heroText}>
