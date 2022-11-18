@@ -19,23 +19,25 @@ html::after {
   background-color: rgba(255, 255, 255, 0.5);
   z-index: -1;
   top: 0;
+  opacity: 1;
   @media (max-width: 850px) {
     right: -100px;
   }
   @media (max-width: 768px) {
     display: none;
   }
-  // animation: 1s ease-in-out 0s 1 bgColor;
+
+ animation: 1.5s ease-in-out 0s 1 opacity;
+ @keyframes opacity {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
 }
 
-@keyframes bgColor {
-  0% {
-    background-color: #ffccc480;
-  }
-  100% {
-    background-color: #ffffff00;
-  }
-}
 
 body {
   padding: 0;

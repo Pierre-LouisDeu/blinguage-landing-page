@@ -111,12 +111,19 @@
       font-size: 80px;
       font-weight: bold;
       margin: 0;
+      @media (max-height: 900px) {
+        margin-top: 6vh;
+        font-size: 65px;
+      }
     }
 
     p {
       font-size: 24px;
       font-weight: 100;
       padding: 20px 0 40px 0;
+      span {
+        font-style: italic;
+      }
     }
   }
 
@@ -217,12 +224,13 @@
   }
 
   .hero {
-    margin-left: 16vw;
-    margin-top: 22vh;
+    margin-left: 20vw;
+    margin-top: 15vh;
     transition: all 0.5s ease-in-out;
     .heroText {
       h1 {
         font-size: 70px;
+        margin-top: 0vh;
       }
 
       p {
@@ -232,8 +240,7 @@
   }
 
   .coursesContainer {
-    margin: auto;
-    margin-bottom: 7rem;
+    margin: 7vh 0;
     .course {
       margin: 0 2vw;
       align-items: center;
