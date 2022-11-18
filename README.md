@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Japanese Courses Landing Page
+
+A simple showcase website that you can visit [here](https://blinguage-landing-page-ndzp.vercel.app), integrated from the following model : 
 
 Mock-up : [https://dribbble.com/shots/6678558-Japanese-Courses-Landing-Page](https://dribbble.com/shots/6678558-Japanese-Courses-Landing-Page) 
 
@@ -9,7 +9,13 @@ Assets : [https://www.dropbox.com/s/g596d61qrlz07q2/Blinguage.zip?dl=0](https://
 
 ## Run and edit the project
 
-First, run the development server:
+First download the dependencies :
+
+```bash
+npm install
+```
+
+Then run the development server :
 
 ```bash
 npm run dev
